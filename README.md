@@ -28,7 +28,7 @@ To assign function to one of the arrays you need tp push to this table function 
 Pushing function directly to array fires this function on every event to which array is related to, then you can handle the event yourself.
 Pushing function to array as object allows you to specify some additional options:  
 - `fn` - (**required**) type function name which should be fired
-- `type` - (optional) specify event type when function should be fired. You can do this by type string as value when you want to fire this function on one event type or as array of string when you want to fire this function on multiple event functions (look at example section). To know what types of events a given array supports, see **Event types** section below
+- `type` - (optional) specify event type when function should be fired. You can do this by type string as value when you want to fire this function on one event type or as array of string when you want to fire this function on multiple event functions (look at example section). To know what types of events a given array supports, see [**Event types**](#event-types) section below
 - `target` - (optional) fire this function only on target which you specified
 - `propagate` - (optional - default: true) - set to `false` if you want to prevent event propagation
 - `preventDefault` - (optional - default: false) - set to `true` if you want to prevent default action event  
