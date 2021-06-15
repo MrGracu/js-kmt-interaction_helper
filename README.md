@@ -3,7 +3,11 @@
 
 ## Installation
 To use this script you can include optimized JS file using [jsDelivr](https://www.jsdelivr.com/):  
-`<script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper.js"></script>`  
+- Current version:  
+`<script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper.js"></script>`
+- Other versions:
+  - 0.1:  
+  `<script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.1.js"></script>`
   
 ## Usage
 You must include this script **before use** to use properly.  
