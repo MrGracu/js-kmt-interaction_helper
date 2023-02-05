@@ -1,7 +1,7 @@
 /*!
   * KMT-Interaction Helper v0.1 (https://github.com/MrGracu/js-kmt-interaction_helper)
   * Description: Key, Mouse, Touch Interaction Helper - Easier event handling
-  * Copyright 2021 by Gracjan Mika (https://gmika.pl/)
+  * Copyright by Gracjan Mika (https://gmika.pl/)
   * Licensed under MIT (https://github.com/MrGracu/js-kmt-interaction_helper/blob/main/LICENSE)
   */
 
