@@ -8,6 +8,10 @@ To use this script you can include optimized JS file using [jsDelivr](https://ww
 <script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper.js"></script>
 ```
 ### Other versions
+#### v0.2:
+```HTML
+<script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.2.js"></script>
+```
 #### v0.1:
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.1.js"></script>
@@ -33,10 +37,10 @@ Pushing function to array as object allows you to specify some additional option
 - `propagate` - (optional - default: true) - set to `false` if you want to prevent event propagation
 - `preventDefault` - (optional - default: false) - set to `true` if you want to prevent default action event  
   
-Pushing functions to array which fires onload page can be done with parameters:  
+Pushing functions to array which fires onload page can be done with additional parameters (more exampled can be found on section about [**onload function**](#push-function-to-onload-page-array)):  
 
 ```javascript
-_onloadFn.push(exampleFunction("Text in parameter"));
+_onloadFn.push([exampleFunction, ["Test"]]);
 ```  
   
 Other arrays that are assigned to the mouse, touch and keyboard events **do not take any additional parameters**.
@@ -88,8 +92,17 @@ Mouse and touch events arrays return the same object which contains properties:
 To push function directly to array:
 
 ```javascript
+function exampleFunction(args) {
+  console.log("exampleFunction: ", args);
+}
+
 _keyFn.push(exampleFunction);
 ```  
+  
+Output:
+```javascript
+exampleFunction: Object { io: "key", type: "up", code: 38, name: "ArrowUp", target: body }
+```
   
 ---
 ### Push to array as object
@@ -116,31 +129,25 @@ _mouseFn.push({
   
 ---
 ### Push function to onload page array
-To push function to array which fires functions on page load event:
+To push function to array which fires functions on page load event (without additional parameters):
 
 ```javascript
-_keyFn.push(exampleFunction);
+_onloadFn.push(exampleFunction);
 ```  
   
-To push function with parameters to array which fires functions on page load event:
-
-```javascript
-_keyFn.push(exampleFunction("Text in parameter"));
-```  
-  
----
-### Console log argument passed to fired function
-Log passed argument from keyboard fired function to console:
-
+To push function with additional parameters to array which fires functions on page load event can be done as follows:
+#### Push with object additional parameter
 ```javascript
 function exampleFunction(args) {
-  console.log("exampleFunction:",args);
+  console.log("exampleFunction: ", args);
 }
+
+_onloadFn.push([exampleFunction, {msg: "Test"}]);
 ```  
   
 Output:
 ```javascript
-exampleFunction: Object { io: "key", type: "up", code: 38, name: "ArrowUp", target: body }
+exampleFunction:  {msg: 'Test'}
 ```
 
 ## License
