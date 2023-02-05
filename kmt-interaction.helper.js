@@ -242,9 +242,7 @@ window.addEventListener("touchstart", function(e) {
 /* ON WINDOW LOADED EVENT */
 window.onload = function() {
 	for(let i = 0; i < _onloadFn.length; i++) {
-		if(_onloadFn[i].length) {
-			if(_onloadFn[i].length > 1 && typeof _onloadFn[i][0] === "function") _onloadFn[i][0](_onloadFn[i][1]);
-			else if(typeof _onloadFn[i] === "function") _onloadFn[i]();
-		}
+		if(_onloadFn[i].length > 1 && typeof _onloadFn[i][0] === "function") _onloadFn[i][0](_onloadFn[i][1]);
+		else if(typeof _onloadFn[i] === "function") _onloadFn[i]();
 	}
 };
