@@ -102,7 +102,7 @@ function _getKey(type, code, name, target = null, e = null) {
 /**
  * Propagate mouse events.
  *
- * @param  type	- event type (click, context, dbclick, down, up, enter, leave, move, out, over)
+ * @param  type	- event type (click, context, dbclick, down, up, enter, leave, move, out, over, scroll)
  * @param  e	- event
  *
  * @return null
@@ -213,6 +213,11 @@ window.onmouseout = function(e) {
 /* ON WINDOW MOUSE OVER EVENT */
 window.onmouseover = function(e) {
 	_getMouse("over", e);
+};
+
+/* ON WINDOW MOUSE SCROLL EVENT */
+window.onscroll = function(e) {
+	_getMouse("scroll", e);
 };
 
 /*************************************************************/
