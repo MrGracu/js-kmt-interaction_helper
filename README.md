@@ -3,11 +3,15 @@
 
 ## Installation
 To use this script you can include optimized JS file using [jsDelivr](https://www.jsdelivr.com/):  
-### Current: v0.3:
+### Current: v0.4:
+```HTML
+<script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.4.js"></script>
+```
+### Other versions
+#### v0.3:
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.3.js"></script>
 ```
-### Other versions
 #### v0.1:
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/MrGracu/js-kmt-interaction_helper@main/production/kmt-interaction.helper_v0.1.js"></script>
@@ -59,7 +63,8 @@ For `_mouseFn` array you can specify this events:
 - `leave` - fires when pointer is moved out of an element
 - `move` - fires when pointer is moving while it is over an element
 - `out` - fires when user moves the mouse pointer out of an element, or out of one of its children
-- `over` - fires when the pointer is moved onto an element, or onto one of its children  
+- `over` - fires when the pointer is moved onto an element, or onto one of its children
+- `scroll` - fires when user uses mouse scroll  
   
 For `_touchFn` array you can specify this events:  
 - `cancel` - fires when touch is interrupted
